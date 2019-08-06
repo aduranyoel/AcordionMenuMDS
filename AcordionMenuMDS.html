@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Accordion Menu - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body{margin-top:50px;}
+.glyphicon { margin-right:10px; }
+.panel-body { padding:0px; }
+.panel-body table tr td { padding-left: 15px }
+.panel-body .table {margin-bottom: 0px; }
+/* Estilo menu  MDS*/
+.item-menu-level {
+	text-align: center !important;
+	cursor: pointer !important;
+	background-color: #fff;
+	width: 100%;
+	border: none;
+}
+	.item-menu-level:hover {
+		background-color: #ffa500 !important;
+		color: #fff !important;
+	}
+	.item-menu-level:focus {
+		outline: none !important;
+	}
+    /* end */
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 col-md-3">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <button id="level1Menu_lineasOrigen" class="btn btn-default panel panel-default item-menu-level" data-toggle="collapse" data-parent="#accordion" data-target="#">
+                        LÍNEAS ORIGEN
+                    </button>
+                    <!-- @*sub menu aqui*@ -->
+                </div>
+                <div class="panel panel-default">
+                    <button class="btn btn-default panel panel-default item-menu-level" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo">
+                        LÍNEAS DETECTA
+                    </button>
+                    <div id="collapseTwo" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                            <table class="table text-center">
+                                <tr class="item-menu-level">
+                                    <td>
+                                        ITEM1
+                                    </td>
+                                </tr>
+                                <tr class="item-menu-level">
+                                    <td>
+                                        ITEM2
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <button class="btn btn-default panel panel-default item-menu-level" data-toggle="collapse" data-parent="#accordion" data-target="#">
+                        CAUSAS
+                    </button>
+                    <!-- @*sub menu aqui*@ -->
+                </div>
+                <div class="panel panel-default">
+                    <button class="btn btn-default panel panel-default item-menu-level" data-toggle="collapse" data-parent="#accordion" data-target="#">
+                        ACCIONES CORRECTIVAS
+                    </button>
+                    <!-- @*sub menu aqui*@ -->
+                </div>
+                <div class="panel panel-default">
+                    <button disabled="disabled" style="cursor: not-allowed !important;" class="btn btn-default panel panel-default item-menu-level" data-toggle="collapse" data-parent="#accordion" data-target="#">
+                        CAR
+                    </button>
+                    <!-- @*sub menu aqui*@ -->
+                </div>
+                <div class="panel panel-default">
+                    <button class="btn btn-default panel panel-default item-menu-level" data-toggle="collapse" data-parent="#accordion" data-target="#">
+                        ANÁLISIS
+                    </button>
+                    <!-- @*sub menu aqui*@ -->
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-sm-9 col-md-9">
+            <div class="well">
+                <h1>
+                    Accordion Menu With Icon</h1>
+                <p id="write"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+var str = ""+
+"<p>Make simple <b>typing</b> effect with <span style='color:#E8117F;'>HTML content</span> and <img src='http://placehold.it/150x150/DF5646/FFF'> image! using javascript</p>";
+    var i = 0;
+    var isTag;
+    var text;
+
+(function type() {
+    text = str.slice(0, ++i);
+    if (text === str) return;
+
+    document.getElementById('write').innerHTML = text;
+
+    var char = text.slice(-1);
+    if (char === '<') isTag = true;
+    if (char === '>') isTag = false;
+
+    if (isTag) return type();
+    setTimeout(type, 80);
+}());
+</script>
+</body>
+</html>
