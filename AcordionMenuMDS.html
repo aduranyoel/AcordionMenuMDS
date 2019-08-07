@@ -44,7 +44,7 @@
                     <!-- @*sub menu aqui*@ -->
                 </div>
                 <div class="panel panel-default">
-                    <button class="btn btn-default panel panel-default item-menu-level" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo">
+                    <button id="btnLineaDetecta_Level1" class="btn btn-default panel panel-default item-menu-level" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo">
                         LÍNEAS DETECTA
                         <i id="caretBtn" class="fa fa-caret-right f-r"></i>
                     </button>
@@ -123,6 +123,13 @@ var str = ""+
     if (isTag) return type();
     setTimeout(type, 80);
 }());
+
+
+$('#btnLineaDetecta_Level1').on('click', function(){
+    $('#caretBtn').toggleClass("fa-caret-right");
+    $('#caretBtn').toggleClass("fa-caret-down");
+
+})
 </script>
 </body>
 </html>
